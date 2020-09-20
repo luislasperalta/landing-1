@@ -1,0 +1,303 @@
+body, html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    font-family: "Roboto Mono", monospace;
+    color: #17353d;
+    background: whitesmoke; }
+  
+  /* Menu */
+  .header {
+    background-color: black;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    /* menu icon */
+    /* Fin menu icon*/
+    /* menu boton */ }
+    .header ul {
+      list-style: none;
+      overflow: hidden;
+      background-color: black;
+      margin: 0; }
+      .header ul li a {
+        display: block;
+        padding: 10px 45px;
+        text-decoration: none;
+        color: #c7cace;
+        font-size: 1.2em; }
+    .header li a:hover,
+    .header .menu-btn:hover {
+      background-color: #c7cace;
+      color: black; }
+    .header .logo {
+      display: block;
+      float: left;
+      margin-left: 30px;
+      width: 120px;
+      width: 120px;
+       }
+    .header .menu {
+      clear: both;
+      max-height: 0;
+      transition: max-height 0.2s ease-out; }
+    .header .menu-icon {
+      cursor: pointer;
+      display: block;
+      float: right;
+      padding: 30px;
+      position: relative;
+      user-select: none; }
+      .header .menu-icon .navicon {
+        background: #c7cace;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: 0.2s ease-out;
+        width: 18px; }
+        .header .menu-icon .navicon:before, .header .menu-icon .navicon:after {
+          background: #c7cace;
+          content: "";
+          display: block;
+          height: 100%;
+          position: absolute;
+          transition: all 0.2s ease-out;
+          width: 100%; }
+        .header .menu-icon .navicon:before {
+          top: 5px; }
+        .header .menu-icon .navicon:after {
+          top: -5px; }
+    .header .menu-btn {
+      display: none; }
+      .header .menu-btn:checked ~ .menu {
+        max-height: 240px; }
+      .header .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent; }
+      .header .menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg); }
+      .header .menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg); }
+      .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+      .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+        top: 0; }
+            /* The hero image */
+    .hero-image {
+        /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/featuredImage-11606-12-cosas-que-quiza-no-sabias-sobre-el-laberinto-del-fauno-en-su-decimo-aniversario-992x558@LaVanguardia-Web.jpg);
+      
+        /* Set a specific height */
+        height: 100%;
+      
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+      
+      /* Place text in the middle of the image */
+      .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }
+      .presentacion{        
+        border-radius: 15%;
+        background: turquoise;
+        margin-left: 10%;
+        margin-right: 10%;
+        align-content: center;
+        margin-top: 1%;
+    
+    }
+    .presentacion img{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin-left: 25%;
+    }
+    .presentacion p{
+        margin-left: 25%;
+    }
+
+    .presentacion .texto{
+        display: none;
+    } 
+    .registro{
+        margin-top: 5%;
+    }
+    .Formulario{
+        background: turquoise;
+        border-radius: 20%;
+    }
+    .inetrior{
+        text-align: center;
+    }
+.mapa img{
+    height: 80%;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 20%;
+}
+.registro{
+    background: coral;
+}
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+    
+  
+  /* TABLET & DESKTOP 48em = 768px */
+  @media (min-width: 48em) {
+    .header li {
+      float: left; }
+  
+    .header li a {
+      padding: 20px 30px !important; }
+  
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none; }
+  
+    .header .menu-icon {
+      display: none; } }
+      img {
+        max-width: 100%;
+        display: block; }
+ .header .logo{
+     max-width: 20%;
+     max-height: 20%;
+ }   
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  label {
+    margin: 0; }
+  
+  section {
+    padding: 6em 0 3em; }
+  
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    line-height: 1.6; }
+  
+  .btn {
+    display: inline-block;
+    text-decoration: none;
+    /* 0.5 * 16px =  8px top y bottom */
+    /* 1.25 * 16px = 20px left y right */
+    padding: 0.5em 1.25em;
+    background: var(--btn-color, lightcoral);
+    color: var(--text-color, #29021c);
+    /* 1.125 * 16px = 18px */
+    font-size: 1.125em;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0.25em;
+    transition: transform 250ms ease-in-out, opacity 250ms linear; }
+  
+  .btn:hover,
+  .btn:focus {
+    transform: scale(1.1);
+    opacity: 0.8; }
+
+    
+    @media (min-width: 48em){
+    /* The hero image */
+    .hero-image {
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/featuredImage-11606-12-cosas-que-quiza-no-sabias-sobre-el-laberinto-del-fauno-en-su-decimo-aniversario-992x558@LaVanguardia-Web.jpg);
+    
+      /* Set a specific height */
+      height: 100%;
+    
+      /* Position and center the image to scale nicely on all screens */
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+    }
+    
+    /* Place text in the middle of the image */
+    .hero-text {
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+    }
+
+.presentacion{
+    border-radius: 0;
+    background: orange;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+}
+
+.presentacion .texto{
+    display: initial;
+}
+
+.presentacion img{
+    margin-left: 13%;
+}
+.foto{
+    
+    float: left;
+    
+}
+
+.foto p{
+    margin-left: 0%;
+    align-content: center;
+}
+
+.texto{
+    float: left;
+    width: 30%;
+} 
+.registro{
+    background: chocolate;
+    margin-top: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.Formulario{    
+    
+    border-radius: 10%;
+    background-color: blueviolet;
+    float: left;
+    
+}
+.inetrior{
+    text-align: center;
+    
+}
+.mapa img{    
+    border-radius: 20%;
+    height: 100%;
+    width: 100%;
+    }
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+}
